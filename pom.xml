@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>jsf-primfaces</groupId>
+	<artifactId>jsf-primfaces</artifactId>
+	<version>1.0</version>
+	<packaging>war</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<source>20</source>
+					<target>20</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.4.0</version>
+				<configuration>
+					<warSourceDirectory>webapp</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>https://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<!-- Servlet -->
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.annotation</groupId>
+			<artifactId>jakarta.annotation-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<!-- Faces Implementation -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.2.20</version>
+		</dependency>
+		<!-- Faces Library -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.2.20</version>
+		</dependency>
+		<!-- Primefaces Version 5 -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>14.0.0</version>
+		</dependency>
+		<!-- JSP Library -->
+		<dependency>
+			<groupId>jakarta.servlet.jsp</groupId>
+			<artifactId>jakarta.servlet.jsp-api</artifactId>
+			<version>4.0.0-M2</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- JSTL Library -->
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+	</dependencies>
+</project>
